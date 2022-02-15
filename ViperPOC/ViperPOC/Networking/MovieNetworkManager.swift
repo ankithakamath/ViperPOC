@@ -18,27 +18,19 @@ class MovieNetworkManager
     {
         print("...............")
         var movieInfo = [MoviesModel]()
+        guard let path = Bundle.main.path(forResource: "movies", ofType: "json")
+           else
+           {return}
+           let url = URL(fileURLWithPath: path)
+           do {
+             let movieData = try Data.init(contentsOf: url, options: .mappedIfSafe)
+             movieInfo = try JSONDecoder().decode([MoviesModel].self, from: movieData)
+           }
+           catch {
+             print("Error ", error.localizedDescription)
+           }
+           completionHandler(movieInfo)
         
-        if let url = URL.init(string: "http://localhost:8000/movies.json" )
-        {
-            let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                
-                if error != nil || data == nil
-                {
-                    print("error", error!)
-                }
-                else
-                {
-                    if let response = String.init(data: data!, encoding: .ascii){
-                        let jsondata = response.data(using: .utf8)!
-                        movieInfo = try! JSONDecoder().decode([MoviesModel].self, from: jsondata)
-                        completionHandler(movieInfo)
-                        
-                    }
-                }
-            })
-            task.resume()
-        }
     }
     
     func fetchImage(imageURL: String, completionHandler:@escaping (UIImage)-> Void)
@@ -69,7 +61,7 @@ class MovieNetworkManager
                     else
                     {
                         completionHandler(defaultImage!)
-                        return 
+                        return
                     }
                     self.imageCache.setObject(image, forKey: imageURL as NSString)
                     completionHandler(image)

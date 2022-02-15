@@ -20,6 +20,7 @@
 		9ABC328627B2B12E009DA5B8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC328527B2B12E009DA5B8 /* DetailsViewController.swift */; };
 		9ABC328927B2B3D3009DA5B8 /* MoviesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC328827B2B3D3009DA5B8 /* MoviesBuilder.swift */; };
 		9ABC328E27B2CA9E009DA5B8 /* MoviesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC328D27B2CA9E009DA5B8 /* MoviesNavigator.swift */; };
+		9AD26BF327BB9A3A009AF487 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AD26BF227BB9A3A009AF487 /* movies.json */; };
 		C19D011127B253910013D2E7 /* MovieNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D011027B253910013D2E7 /* MovieNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		9ABC328527B2B12E009DA5B8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9ABC328827B2B3D3009DA5B8 /* MoviesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesBuilder.swift; sourceTree = "<group>"; };
 		9ABC328D27B2CA9E009DA5B8 /* MoviesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNavigator.swift; sourceTree = "<group>"; };
+		9AD26BF227BB9A3A009AF487 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		C19D011027B253910013D2E7 /* MovieNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		9ABC328427B25115009DA5B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AD26BF227BB9A3A009AF487 /* movies.json */,
 				9ABC327D27B0EC15009DA5B8 /* MoviesModel.swift */,
 			);
 			path = Model;
@@ -215,6 +218,7 @@
 			files = (
 				9ABC326E27B0EB2B009DA5B8 /* LaunchScreen.storyboard in Resources */,
 				9ABC326B27B0EB2B009DA5B8 /* Assets.xcassets in Resources */,
+				9AD26BF327BB9A3A009AF487 /* movies.json in Resources */,
 				9ABC326927B0EB27009DA5B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
